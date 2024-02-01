@@ -10,17 +10,20 @@
 <body>
    <button id="fullscreenButton">Go Fullscreen</button>
 
-   <script>
-      // JavaScript for fullscreen
-      document.getElementById("fullscreenButton").addEventListener("click", function() {
-         if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen();
-         } else {
-            if (document.exitFullscreen) {
-               document.exitFullscreen();
-            }
-         }
-      });
-   </script>
+<script>
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+     window.scrollTo(0, 0);
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+     window.scrollTo(0, 0);
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+     window.scrollTo(0, 0);
+  }
+}
+</script>
 </body>
 </html>
