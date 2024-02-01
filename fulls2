@@ -1,0 +1,17 @@
+<script>
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+     window.scrollTo(0, 0);
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+     window.scrollTo(0, 0);
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+     window.scrollTo(0, 0);
+  }
+}
+  
+
+</script>
