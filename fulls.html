@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Fullscreen Page</title>
+   <style>
+      /* Add any CSS styling here */
+      #fullscreenButton { /* styling for button */ }
+   </style>
+</head>
+<body>
+   <button id="fullscreenButton">Go Fullscreen</button>
+
+   <script>
+      // JavaScript for fullscreen
+      document.getElementById("fullscreenButton").addEventListener("click", function() {
+         if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+         } else {
+            if (document.exitFullscreen) {
+               document.exitFullscreen();
+            }
+         }
+      });
+   </script>
+</body>
+</html>
